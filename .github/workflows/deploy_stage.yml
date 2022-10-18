@@ -35,7 +35,7 @@ jobs:
           CLIENTID: ${{ secrets.CLIENTID_STAGE }}
           CLIENTSECRET: ${{ secrets.CLIENTSECRET_STAGE }}
           TECHNICALACCOUNTID: ${{ secrets.TECHNICALACCID_STAGE }}
-          IMSORGID: ${{ secrets.AIO_PROJECT_ORG_ID }}
+          IMSORGID: ${{ secrets.IMSORGID }}
           SCOPES: ${{ secrets.SCOPES }}
           KEY: ${{ secrets.KEY_STAGE }}
       - name: Build
@@ -59,4 +59,4 @@ jobs:
         with:
           os: ${{ matrix.os }}
           command: deploy
-          noPublish: true
+          noPublish: false
